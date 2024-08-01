@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=3 uid="uid://gukfiel5lk8b"]
+
+[ext_resource type="Texture2D" uid="uid://byql8cqbj46ug" path="res://assets/surroundings/buildings/gardens/plants/wheat/wheat_1.png" id="1_vlkvm"]
+[ext_resource type="Texture2D" uid="uid://7v4pocdp154w" path="res://assets/surroundings/buildings/gardens/plants/wheat/wheat_2.png" id="2_rmgd4"]
+[ext_resource type="Texture2D" uid="uid://cjc0fgq230tnf" path="res://assets/surroundings/buildings/gardens/plants/wheat/wheat_3.png" id="3_bskht"]
+[ext_resource type="Texture2D" uid="uid://cd05d03o5udvi" path="res://assets/surroundings/buildings/gardens/plants/wheat/wheat_4.png" id="4_ygxbx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_isuo4"]
+size = Vector2(18, 13)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lqekd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_vlkvm")
+}],
+"loop": true,
+"name": &"1_step",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_rmgd4")
+}],
+"loop": true,
+"name": &"2_step",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_bskht")
+}],
+"loop": true,
+"name": &"3_step",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ygxbx")
+}],
+"loop": true,
+"name": &"finish",
+"speed": 5.0
+}]
+
+[node name="wheat" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+visible = false
+position = Vector2(0, -4.5)
+shape = SubResource("RectangleShape2D_isuo4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_lqekd")
+animation = &"1_step"
+autoplay = "1_step"

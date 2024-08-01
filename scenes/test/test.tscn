@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=3 uid="uid://c0j7o23bivf3w"]
+
+[ext_resource type="Script" path="res://scenes/test/testplayerMovement.cs" id="1_axge7"]
+[ext_resource type="Texture2D" uid="uid://cte7yt60puwgx" path="res://assets/Characters/Player/strange_hat.png" id="1_yo56p"]
+[ext_resource type="Texture2D" uid="uid://s4henc1rb1b6" path="res://assets/surroundings/buildings/Player house/Player_house.png" id="2_sodog"]
+[ext_resource type="PackedScene" uid="uid://cy38gecbva1dv" path="res://scenes/test/phouse.tscn" id="4_sa85n"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_itaua"]
+radius = 3.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pctwn"]
+size = Vector2(51, 25)
+
+[node name="Test" type="Node2D"]
+y_sort_enabled = true
+
+[node name="Node" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="testplayerMovement" type="CharacterBody2D" parent="Node"]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_axge7")
+
+[node name="StrangeHat" type="Sprite2D" parent="Node/testplayerMovement"]
+texture = ExtResource("1_yo56p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/testplayerMovement"]
+position = Vector2(-1, 4)
+shape = SubResource("CircleShape2D_itaua")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Node/testplayerMovement"]
+remote_path = NodePath("../../../Node2/Camera2D")
+
+[node name="Node2" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Node2"]
+
+[node name="PlayerHouse" type="Sprite2D" parent="Node2/StaticBody2D"]
+position = Vector2(92, -7)
+texture = ExtResource("2_sodog")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2/StaticBody2D"]
+position = Vector2(91.5, 17.5)
+shape = SubResource("RectangleShape2D_pctwn")
+
+[node name="Camera2D" type="Camera2D" parent="Node2"]
+zoom = Vector2(3, 3)
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+
+[node name="Phouse" parent="Node2" instance=ExtResource("4_sa85n")]
+position = Vector2(194, 39)

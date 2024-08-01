@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://ddvlts4nm62ru"]
+
+[ext_resource type="Script" path="res://scripts/World/Placeble/garden.cs" id="1_cuv1h"]
+[ext_resource type="Texture2D" uid="uid://clv5i5txkbowg" path="res://assets/surroundings/buildings/gardens/Garden_1.png" id="1_vtgvu"]
+[ext_resource type="Script" path="res://scripts/World/Buildings/GardenUI.cs" id="3_0skaf"]
+[ext_resource type="PackedScene" uid="uid://dautbgnb2fnfj" path="res://scenes/UI/plant_ui.tscn" id="3_60kpe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vi4qh"]
+size = Vector2(36, 35)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ihswh"]
+size = Vector2(48, 51)
+
+[node name="Garden" type="Node2D"]
+position = Vector2(1, 1)
+script = ExtResource("1_cuv1h")
+
+[node name="Garden1" type="Sprite2D" parent="."]
+texture = ExtResource("1_vtgvu")
+
+[node name="BorderCollision" type="StaticBody2D" parent="."]
+collision_layer = 64
+collision_mask = 56
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BorderCollision"]
+visible = false
+position = Vector2(-1, 2.5)
+shape = SubResource("RectangleShape2D_vi4qh")
+
+[node name="InteractionArea" type="Area2D" parent="."]
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+visible = false
+position = Vector2(-1, -0.5)
+shape = SubResource("RectangleShape2D_ihswh")
+
+[node name="MarkerForPlants" type="Marker2D" parent="."]
+position = Vector2(-1, -1)
+
+[node name="GardenUI" type="Node2D" parent="."]
+position = Vector2(19, -97)
+script = ExtResource("3_0skaf")
+
+[node name="PlantUI" parent="GardenUI" instance=ExtResource("3_60kpe")]
+visible = false

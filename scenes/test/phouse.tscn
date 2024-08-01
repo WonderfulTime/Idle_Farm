@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://cy38gecbva1dv"]
+
+[ext_resource type="Script" path="res://scripts/World/Buildings/PlayerHouse.cs" id="1_iys1k"]
+[ext_resource type="Texture2D" uid="uid://do3belimnnuro" path="res://assets/surroundings/buildings/Player house/Player_house_1.png" id="2_0jh0p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3pe2k"]
+size = Vector2(49, 25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t7og5"]
+size = Vector2(51, 46)
+
+[node name="Phouse" type="StaticBody2D"]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_iys1k")
+
+[node name="PlayerHouse1" type="Sprite2D" parent="."]
+texture = ExtResource("2_0jh0p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 22.5)
+shape = SubResource("RectangleShape2D_3pe2k")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.5, 26)
+shape = SubResource("RectangleShape2D_t7og5")

@@ -1,0 +1,55 @@
+[gd_scene load_steps=8 format=3 uid="uid://783losatnad5"]
+
+[ext_resource type="Texture2D" uid="uid://s4henc1rb1b6" path="res://assets/surroundings/buildings/Player house/Player_house.png" id="1_ea7wl"]
+[ext_resource type="Script" path="res://scripts/World/Buildings/PlayerHouse.cs" id="1_yisfa"]
+[ext_resource type="Texture2D" uid="uid://do3belimnnuro" path="res://assets/surroundings/buildings/Player house/Player_house_1.png" id="2_f0nty"]
+[ext_resource type="Script" path="res://scripts/World/Buildings/PlayerHouseUI.cs" id="4_nq84n"]
+[ext_resource type="PackedScene" uid="uid://fneihccahvs0" path="res://scenes/UI/PlayerHouseUI.tscn" id="5_y1nud"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jaiwi"]
+size = Vector2(76, 66)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j3ca7"]
+size = Vector2(60.8333, 37.5)
+
+[node name="PlayerHouse" type="Node2D"]
+scale = Vector2(1.2, 1.2)
+script = ExtResource("1_yisfa")
+
+[node name="PlayerHouse" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("1_ea7wl")
+
+[node name="PlayerHouse1" type="Sprite2D" parent="."]
+position = Vector2(0.900002, -22.5)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("2_f0nty")
+
+[node name="InteractionArea" type="Area2D" parent="."]
+editor_description = "Коллизия в которой происходит взаимодействие с объектом"
+position = Vector2(0.900002, -22.5)
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+visible = false
+position = Vector2(-1, 23)
+shape = SubResource("RectangleShape2D_jaiwi")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+editor_description = "Коллизия запрещающая проход игроку
+"
+position = Vector2(0.900002, -22.5)
+collision_layer = 64
+collision_mask = 24
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+visible = false
+position = Vector2(-0.416666, 24.5833)
+shape = SubResource("RectangleShape2D_j3ca7")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="PlayerHouseUI" type="Node2D" parent="."]
+script = ExtResource("4_nq84n")
+
+[node name="PlayerHouseUI" parent="PlayerHouseUI" instance=ExtResource("5_y1nud")]
