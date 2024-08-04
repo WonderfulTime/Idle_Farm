@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://c2auh4r3uxuys"]
+[gd_scene load_steps=5 format=3 uid="uid://c2auh4r3uxuys"]
 
 [ext_resource type="Texture2D" uid="uid://cv8f4j0db2jaj" path="res://assets/UI/inventory/inventory_background.png" id="1_ivlq5"]
 [ext_resource type="PackedScene" uid="uid://0jh50iedien3" path="res://scenes/UI/inventory/InventorySlot.tscn" id="2_0fobh"]
+[ext_resource type="Texture2D" uid="uid://b3jh8gom7pwoi" path="res://assets/UI/icons/buttons/inventory_buttons/inventory_bag_frame_icon.png" id="3_kk1m2"]
+[ext_resource type="Texture2D" uid="uid://80ja1gawootp" path="res://assets/UI/icons/buttons/inventory_buttons/inventory_agrocultureStock_icon.png" id="5_ic3wv"]
 
 [node name="InventoryGUI" type="Control"]
 custom_minimum_size = Vector2(191, 73)
@@ -9,15 +11,15 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -1409.0
-offset_bottom = -727.0
+offset_right = -1400.0
+offset_bottom = -726.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 layout_mode = 0
-offset_right = 191.0
-offset_bottom = 73.0
+offset_right = 200.0
+offset_bottom = 74.0
 texture = ExtResource("1_ivlq5")
 patch_margin_left = 6
 patch_margin_top = 6
@@ -182,3 +184,35 @@ layout_mode = 2
 
 [node name="InventorySlot48" parent="NinePatchRect/GridContainer" instance=ExtResource("2_0fobh")]
 layout_mode = 2
+
+[node name="ChangeOptionButtonContainer" type="GridContainer" parent="."]
+editor_description = "Контейнер для кнопок переключения вкладок инвентаря"
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 131.0
+offset_top = -6.0
+offset_right = -5.0
+offset_bottom = 2.0
+grow_horizontal = 2
+columns = 3
+
+[node name="InventoryShowButton" type="Button" parent="ChangeOptionButtonContainer"]
+editor_description = "Вкладка главного инвентаря для всяких предметов/инструментов"
+layout_mode = 2
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="ChangeOptionButtonContainer/InventoryShowButton"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_kk1m2")
+centered = false
+
+[node name="AgricultureButton" type="Button" parent="ChangeOptionButtonContainer"]
+editor_description = "Активирует вкладку где отображены все сельскохозяйственные культуры на складе"
+layout_mode = 2
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="ChangeOptionButtonContainer/AgricultureButton"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_ic3wv")
+centered = false

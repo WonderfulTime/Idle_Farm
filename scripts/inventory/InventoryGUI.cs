@@ -4,11 +4,19 @@ using System;
 
 public partial class ParentInventoryGUI : Node2D, IBaseUI
 {
+    
 
     public void ShowWindow(Control UIScene, GameProfileManager profileManager)
     {
+        GD.Print(profileManager.playerPos);
 
-        
+
+        Vector2 playerPosition = profileManager.playerPos;
+        Vector2 inventorySize = UIScene.Size;
+        Vector2 inventoryPosition = playerPosition - (inventorySize / 2);
+        UIScene.Position = inventoryPosition;
+
+
         UIScene.Visible = true;
         profileManager.isInventoryOpen = true; // юишка активна
 
@@ -56,7 +64,7 @@ public partial class InventoryGUI : Node
         UIScene = GetNode<Control>("InventoryGUI");
         UIScene.Visible = false;
 
-
+        profileManager = GetNode<GameProfileManager>("/root/GameProfileManager");
 
         _inventoryGUI = new ParentInventoryGUI();
     }
@@ -110,7 +118,7 @@ public partial class InventoryGUI : Node
     public override void _Process(double delta)
     {
 
-        profileManager = GetNode<GameProfileManager>("/root/GameProfileManager");
+        
 
     }
 }
