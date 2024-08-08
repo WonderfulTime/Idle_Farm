@@ -3,40 +3,48 @@
   "WorkspaceRootPath": "A:\\Programming\\Godot\\Godot_projects\\Project_idle_farm\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{50EF5D82-DF43-4D48-AC6A-2107C470EF0F}|Project Idle Farm.csproj|a:\\programming\\godot\\godot_projects\\project_idle_farm\\scripts\\inventory\\items\\dropsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50EF5D82-DF43-4D48-AC6A-2107C470EF0F}|Project Idle Farm.csproj|solutionrelative:scripts\\inventory\\items\\dropsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|A:\\Programming\\Godot\\Godot_projects\\Project_idle_farm\\scripts\\World\\Obj\\Tree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:scripts\\World\\Obj\\Tree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{50EF5D82-DF43-4D48-AC6A-2107C470EF0F}|Project Idle Farm.csproj|a:\\programming\\godot\\godot_projects\\project_idle_farm\\scripts\\inventory\\items\\woodlog_tier1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50EF5D82-DF43-4D48-AC6A-2107C470EF0F}|Project Idle Farm.csproj|solutionrelative:scripts\\inventory\\items\\woodlog_tier1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{50EF5D82-DF43-4D48-AC6A-2107C470EF0F}|Project Idle Farm.csproj|a:\\programming\\godot\\godot_projects\\project_idle_farm\\scripts\\inventory\\items\\dropitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50EF5D82-DF43-4D48-AC6A-2107C470EF0F}|Project Idle Farm.csproj|solutionrelative:scripts\\inventory\\items\\dropitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{50EF5D82-DF43-4D48-AC6A-2107C470EF0F}|Project Idle Farm.csproj|a:\\programming\\godot\\godot_projects\\project_idle_farm\\scripts\\managers\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50EF5D82-DF43-4D48-AC6A-2107C470EF0F}|Project Idle Farm.csproj|solutionrelative:scripts\\managers\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{50EF5D82-DF43-4D48-AC6A-2107C470EF0F}|Project Idle Farm.csproj|a:\\programming\\godot\\godot_projects\\project_idle_farm\\scripts\\inventory\\inventorygui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50EF5D82-DF43-4D48-AC6A-2107C470EF0F}|Project Idle Farm.csproj|solutionrelative:scripts\\inventory\\inventorygui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{50EF5D82-DF43-4D48-AC6A-2107C470EF0F}|Project Idle Farm.csproj|a:\\programming\\godot\\godot_projects\\project_idle_farm\\scripts\\world\\placeble\\garden.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50EF5D82-DF43-4D48-AC6A-2107C470EF0F}|Project Idle Farm.csproj|solutionrelative:scripts\\world\\placeble\\garden.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|A:\\Programming\\Godot\\Godot_projects\\Project_idle_farm\\scripts\\Managers\\InventoryManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:scripts\\Managers\\InventoryManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{50EF5D82-DF43-4D48-AC6A-2107C470EF0F}|Project Idle Farm.csproj|a:\\programming\\godot\\godot_projects\\project_idle_farm\\scripts\\world\\buildings\\playerhouse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{50EF5D82-DF43-4D48-AC6A-2107C470EF0F}|Project Idle Farm.csproj|solutionrelative:scripts\\world\\buildings\\playerhouse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{50EF5D82-DF43-4D48-AC6A-2107C470EF0F}|Project Idle Farm.csproj|a:\\programming\\godot\\godot_projects\\project_idle_farm\\scripts\\managers\\gameprofilemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50EF5D82-DF43-4D48-AC6A-2107C470EF0F}|Project Idle Farm.csproj|solutionrelative:scripts\\managers\\gameprofilemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50EF5D82-DF43-4D48-AC6A-2107C470EF0F}|Project Idle Farm.csproj|a:\\programming\\godot\\godot_projects\\project_idle_farm\\scripts\\inventory\\items\\woodlog_tier1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50EF5D82-DF43-4D48-AC6A-2107C470EF0F}|Project Idle Farm.csproj|solutionrelative:scripts\\inventory\\items\\woodlog_tier1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50EF5D82-DF43-4D48-AC6A-2107C470EF0F}|Project Idle Farm.csproj|a:\\programming\\godot\\godot_projects\\project_idle_farm\\scripts\\inventory\\items\\dropsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50EF5D82-DF43-4D48-AC6A-2107C470EF0F}|Project Idle Farm.csproj|solutionrelative:scripts\\inventory\\items\\dropsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50EF5D82-DF43-4D48-AC6A-2107C470EF0F}|Project Idle Farm.csproj|a:\\programming\\godot\\godot_projects\\project_idle_farm\\scripts\\inventory\\items\\dropitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50EF5D82-DF43-4D48-AC6A-2107C470EF0F}|Project Idle Farm.csproj|solutionrelative:scripts\\inventory\\items\\dropitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50EF5D82-DF43-4D48-AC6A-2107C470EF0F}|Project Idle Farm.csproj|a:\\programming\\godot\\godot_projects\\project_idle_farm\\scripts\\inventory\\inventorygui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50EF5D82-DF43-4D48-AC6A-2107C470EF0F}|Project Idle Farm.csproj|solutionrelative:scripts\\inventory\\inventorygui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50EF5D82-DF43-4D48-AC6A-2107C470EF0F}|Project Idle Farm.csproj|a:\\programming\\godot\\godot_projects\\project_idle_farm\\scripts\\world\\obj\\tree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50EF5D82-DF43-4D48-AC6A-2107C470EF0F}|Project Idle Farm.csproj|solutionrelative:scripts\\world\\obj\\tree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{50EF5D82-DF43-4D48-AC6A-2107C470EF0F}|Project Idle Farm.csproj|a:\\programming\\godot\\godot_projects\\project_idle_farm\\scripts\\player\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{50EF5D82-DF43-4D48-AC6A-2107C470EF0F}|Project Idle Farm.csproj|solutionrelative:scripts\\player\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50EF5D82-DF43-4D48-AC6A-2107C470EF0F}|Project Idle Farm.csproj|a:\\programming\\godot\\godot_projects\\project_idle_farm\\scripts\\managers\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50EF5D82-DF43-4D48-AC6A-2107C470EF0F}|Project Idle Farm.csproj|solutionrelative:scripts\\managers\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50EF5D82-DF43-4D48-AC6A-2107C470EF0F}|Project Idle Farm.csproj|a:\\programming\\godot\\godot_projects\\project_idle_farm\\scripts\\world\\placeble\\garden.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50EF5D82-DF43-4D48-AC6A-2107C470EF0F}|Project Idle Farm.csproj|solutionrelative:scripts\\world\\placeble\\garden.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{50EF5D82-DF43-4D48-AC6A-2107C470EF0F}|Project Idle Farm.csproj|a:\\programming\\godot\\godot_projects\\project_idle_farm\\scripts\\managers\\playeruimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -51,10 +59,6 @@
       "RelativeMoniker": "D:0:0:{50EF5D82-DF43-4D48-AC6A-2107C470EF0F}|Project Idle Farm.csproj|solutionrelative:scripts\\world\\buildings\\gardenui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{50EF5D82-DF43-4D48-AC6A-2107C470EF0F}|Project Idle Farm.csproj|a:\\programming\\godot\\godot_projects\\project_idle_farm\\scripts\\managers\\gameprofilemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50EF5D82-DF43-4D48-AC6A-2107C470EF0F}|Project Idle Farm.csproj|solutionrelative:scripts\\managers\\gameprofilemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{50EF5D82-DF43-4D48-AC6A-2107C470EF0F}|Project Idle Farm.csproj|a:\\programming\\godot\\godot_projects\\project_idle_farm\\scripts\\interfaces\\ibaseui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{50EF5D82-DF43-4D48-AC6A-2107C470EF0F}|Project Idle Farm.csproj|solutionrelative:scripts\\interfaces\\ibaseui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -66,63 +70,76 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "InventoryManager.cs",
+              "DocumentMoniker": "A:\\Programming\\Godot\\Godot_projects\\Project_idle_farm\\scripts\\Managers\\InventoryManager.cs",
+              "RelativeDocumentMoniker": "scripts\\Managers\\InventoryManager.cs",
+              "ToolTip": "A:\\Programming\\Godot\\Godot_projects\\Project_idle_farm\\scripts\\Managers\\InventoryManager.cs",
+              "RelativeToolTip": "scripts\\Managers\\InventoryManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T23:24:48.134Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Tree.cs",
               "DocumentMoniker": "A:\\Programming\\Godot\\Godot_projects\\Project_idle_farm\\scripts\\World\\Obj\\Tree.cs",
               "RelativeDocumentMoniker": "scripts\\World\\Obj\\Tree.cs",
               "ToolTip": "A:\\Programming\\Godot\\Godot_projects\\Project_idle_farm\\scripts\\World\\Obj\\Tree.cs",
               "RelativeToolTip": "scripts\\World\\Obj\\Tree.cs",
-              "ViewState": "AQIAACQAAAAAAAAAAAAowDoAAAAJAAAA",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAgwDIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-31T16:16:49.815Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "DropSystem.cs",
               "DocumentMoniker": "A:\\Programming\\Godot\\Godot_projects\\Project_idle_farm\\scripts\\inventory\\items\\DropSystem.cs",
               "RelativeDocumentMoniker": "scripts\\inventory\\items\\DropSystem.cs",
               "ToolTip": "A:\\Programming\\Godot\\Godot_projects\\Project_idle_farm\\scripts\\inventory\\items\\DropSystem.cs",
               "RelativeToolTip": "scripts\\inventory\\items\\DropSystem.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAA8AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-31T15:44:52.656Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "WoodLog_tier1.cs",
               "DocumentMoniker": "A:\\Programming\\Godot\\Godot_projects\\Project_idle_farm\\scripts\\inventory\\items\\WoodLog_tier1.cs",
               "RelativeDocumentMoniker": "scripts\\inventory\\items\\WoodLog_tier1.cs",
               "ToolTip": "A:\\Programming\\Godot\\Godot_projects\\Project_idle_farm\\scripts\\inventory\\items\\WoodLog_tier1.cs",
               "RelativeToolTip": "scripts\\inventory\\items\\WoodLog_tier1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAZAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-30T12:14:37.866Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "InventoryGUI.cs",
               "DocumentMoniker": "A:\\Programming\\Godot\\Godot_projects\\Project_idle_farm\\scripts\\inventory\\InventoryGUI.cs",
               "RelativeDocumentMoniker": "scripts\\inventory\\InventoryGUI.cs",
               "ToolTip": "A:\\Programming\\Godot\\Godot_projects\\Project_idle_farm\\scripts\\inventory\\InventoryGUI.cs",
               "RelativeToolTip": "scripts\\inventory\\InventoryGUI.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-27T11:09:17.362Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "GardenUI.cs",
               "DocumentMoniker": "A:\\Programming\\Godot\\Godot_projects\\Project_idle_farm\\scripts\\World\\Buildings\\GardenUI.cs",
               "RelativeDocumentMoniker": "scripts\\World\\Buildings\\GardenUI.cs",
@@ -134,7 +151,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "PlayerHouseUI.cs",
               "DocumentMoniker": "A:\\Programming\\Godot\\Godot_projects\\Project_idle_farm\\scripts\\World\\Buildings\\PlayerHouseUI.cs",
               "RelativeDocumentMoniker": "scripts\\World\\Buildings\\PlayerHouseUI.cs",
@@ -142,24 +159,24 @@
               "RelativeToolTip": "scripts\\World\\Buildings\\PlayerHouseUI.cs",
               "ViewState": "AQIAAEoAAAAAAAAAAAAgwFIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T11:28:15.801Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-24T11:28:15.801Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 2,
               "Title": "GameProfileManager.cs",
               "DocumentMoniker": "A:\\Programming\\Godot\\Godot_projects\\Project_idle_farm\\scripts\\Managers\\GameProfileManager.cs",
               "RelativeDocumentMoniker": "scripts\\Managers\\GameProfileManager.cs",
               "ToolTip": "A:\\Programming\\Godot\\Godot_projects\\Project_idle_farm\\scripts\\Managers\\GameProfileManager.cs",
               "RelativeToolTip": "scripts\\Managers\\GameProfileManager.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAiwBAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAABdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-21T07:07:48.06Z"
+              "WhenOpened": "2024-07-21T07:07:48.06Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "PlayerUIManager.cs",
               "DocumentMoniker": "A:\\Programming\\Godot\\Godot_projects\\Project_idle_farm\\scripts\\Managers\\PlayerUIManager.cs",
               "RelativeDocumentMoniker": "scripts\\Managers\\PlayerUIManager.cs",
@@ -167,12 +184,11 @@
               "RelativeToolTip": "scripts\\Managers\\PlayerUIManager.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-15T17:59:14.293Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-15T17:59:14.293Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "IBaseUI.cs",
               "DocumentMoniker": "A:\\Programming\\Godot\\Godot_projects\\Project_idle_farm\\scripts\\Interfaces\\IBaseUI.cs",
               "RelativeDocumentMoniker": "scripts\\Interfaces\\IBaseUI.cs",
@@ -184,7 +200,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "garden.cs",
               "DocumentMoniker": "A:\\Programming\\Godot\\Godot_projects\\Project_idle_farm\\scripts\\World\\Placeble\\garden.cs",
               "RelativeDocumentMoniker": "scripts\\World\\Placeble\\garden.cs",
@@ -192,18 +208,17 @@
               "RelativeToolTip": "scripts\\World\\Placeble\\garden.cs",
               "ViewState": "AQIAAA0AAAAAAAAAAAAgwBMAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-23T14:21:08.004Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-23T14:21:08.004Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "PlayerHouse.cs",
               "DocumentMoniker": "A:\\Programming\\Godot\\Godot_projects\\Project_idle_farm\\scripts\\World\\Buildings\\PlayerHouse.cs",
               "RelativeDocumentMoniker": "scripts\\World\\Buildings\\PlayerHouse.cs",
               "ToolTip": "A:\\Programming\\Godot\\Godot_projects\\Project_idle_farm\\scripts\\World\\Buildings\\PlayerHouse.cs",
               "RelativeToolTip": "scripts\\World\\Buildings\\PlayerHouse.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAgwCMAAAAiAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-15T17:13:35.557Z",
               "EditorCaption": ""
@@ -216,33 +231,33 @@
               "RelativeDocumentMoniker": "scripts\\Player\\PlayerMovement.cs",
               "ToolTip": "A:\\Programming\\Godot\\Godot_projects\\Project_idle_farm\\scripts\\Player\\PlayerMovement.cs",
               "RelativeToolTip": "scripts\\Player\\PlayerMovement.cs",
-              "ViewState": "AQIAACQAAAAAAAAAAAAowDkAAAA1AAAA",
+              "ViewState": "AQIAACMAAAAAAAAAAAAowDkAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-15T13:02:55.244Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "GameManager.cs",
               "DocumentMoniker": "A:\\Programming\\Godot\\Godot_projects\\Project_idle_farm\\scripts\\Managers\\GameManager.cs",
               "RelativeDocumentMoniker": "scripts\\Managers\\GameManager.cs",
               "ToolTip": "A:\\Programming\\Godot\\Godot_projects\\Project_idle_farm\\scripts\\Managers\\GameManager.cs",
               "RelativeToolTip": "scripts\\Managers\\GameManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-08T12:38:24.837Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "DropItem.cs",
               "DocumentMoniker": "A:\\Programming\\Godot\\Godot_projects\\Project_idle_farm\\scripts\\inventory\\items\\DropItem.cs",
               "RelativeDocumentMoniker": "scripts\\inventory\\items\\DropItem.cs",
               "ToolTip": "A:\\Programming\\Godot\\Godot_projects\\Project_idle_farm\\scripts\\inventory\\items\\DropItem.cs",
               "RelativeToolTip": "scripts\\inventory\\items\\DropItem.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAEAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-30T12:12:48.134Z",
               "EditorCaption": ""

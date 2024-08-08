@@ -11,14 +11,17 @@ public partial class ParentInventoryGUI : Node2D, IBaseUI
         GD.Print(profileManager.playerPos);
 
 
-        Vector2 playerPosition = profileManager.playerPos;
-        Vector2 inventorySize = UIScene.Size;
-        Vector2 inventoryPosition = playerPosition - (inventorySize / 2);
-        UIScene.Position = inventoryPosition;
+        //Vector2 playerPosition = profileManager.playerPos;
+        //Vector2 inventorySize = UIScene.Size;
+        //Vector2 inventoryPosition = playerPosition;
+        //UIScene.Position = inventoryPosition;
 
 
         UIScene.Visible = true;
         profileManager.isInventoryOpen = true; // юишка активна
+
+
+        GD.Print("Позиция инвентаря: "+ UIScene.Position);
 
 
     }

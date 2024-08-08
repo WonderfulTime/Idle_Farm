@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b1wpogbs2u37"
-path="res://.godot/imported/falling_log_tier.png-e276cc7a9d8570b308ca9a2e2d51e560.ctex"
+path="res://.godot/imported/falling_log_tier.png-40b7fd2dd4658250468faa02344d5800.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/surroundings/world/items/wood_logs/falling_log_tier.png"
-dest_files=["res://.godot/imported/falling_log_tier.png-e276cc7a9d8570b308ca9a2e2d51e560.ctex"]
+source_file="res://assets/items/wood_logs/falling_log_tier.png"
+dest_files=["res://.godot/imported/falling_log_tier.png-40b7fd2dd4658250468faa02344d5800.ctex"]
 
 [params]
 

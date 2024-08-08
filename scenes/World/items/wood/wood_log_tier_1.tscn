@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bydo7pvaj7g80"]
 
-[ext_resource type="Texture2D" uid="uid://b1wpogbs2u37" path="res://assets/surroundings/world/items/wood_logs/falling_log_tier.png" id="1_a5q4m"]
 [ext_resource type="Script" path="res://scripts/inventory/items/WoodLog_tier1.cs" id="1_mdjoq"]
+[ext_resource type="Texture2D" uid="uid://b1wpogbs2u37" path="res://assets/items/wood_logs/falling_log_tier.png" id="2_pxa0u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y8qg0"]
 size = Vector2(26, 9)
@@ -10,10 +10,11 @@ size = Vector2(26, 9)
 scale = Vector2(0.8, 0.8)
 script = ExtResource("1_mdjoq")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_a5q4m")
+[node name="ItemTexture" type="Sprite2D" parent="."]
+texture = ExtResource("2_pxa0u")
 
 [node name="CollisionArea" type="Area2D" parent="."]
+collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionArea"]
 position = Vector2(0, 0.5)

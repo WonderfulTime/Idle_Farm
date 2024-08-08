@@ -12,8 +12,7 @@ public partial class DropItem : Node2D
 	
     [Export]
     public int Value = 1; // Значение предмета, например, количество ресурсов
-                          
-    
+
 
     public virtual void OnPickUp()
     {
