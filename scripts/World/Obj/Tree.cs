@@ -4,6 +4,10 @@ using System;
 
 public partial class Tree : Node2D
 {
+    /// <summary>
+    /// класс объекта дерево, сцена объекта дропа итема, шанс дропа предметов
+    /// </summary>
+
     [Export]
     public PackedScene DropItemScene;
 

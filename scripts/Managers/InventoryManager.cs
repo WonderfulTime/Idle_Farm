@@ -16,11 +16,13 @@ public partial class InventoryManager: Node
     {
         profileManager = GetNode<GameProfileManager>("/root/GameProfileManager");
         // Подписываемся на событие
-        WoodLog_tier1.WoodLog_tier1PickedUp += AddItemToInventory;
+        DropItem.ItemPickedUp += AddItemToInventory;
     }
 
     public void AddItemToInventory(Texture ItemTexture, string ItemName)
     {
+        /// функция вызываемая при добавлении предмета в инвентарь
+        /// 
         GD.Print($"Текстура{ItemTexture} в инвентаре");
         GD.Print($"Предмет {ItemName} в инвентаре");
         

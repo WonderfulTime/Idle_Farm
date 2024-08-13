@@ -4,6 +4,13 @@ namespace inventory;
 
 public partial class DropSystem : Node2D
 {
+    /// <summary>
+    /// система отвечающая за дроп предметов
+    /// </summary>
+    /// <param name="dropItemScene"></param>
+    /// <param name="position"></param>
+    /// <param name="itemCount"></param>
+    /// <param name="dropChance"></param>
     public void DropItems(PackedScene dropItemScene, Vector2 position, int itemCount, float dropChance)
     {
         Random random = new Random();

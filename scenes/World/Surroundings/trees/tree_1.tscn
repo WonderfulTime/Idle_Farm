@@ -74,5 +74,6 @@ shape = SubResource("CircleShape2D_jlqji")
 collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ChopZone"]
+visible = false
 position = Vector2(0, 23)
 shape = SubResource("CircleShape2D_2qopc")

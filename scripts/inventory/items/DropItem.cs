@@ -4,7 +4,7 @@ using System;
 /// пространство имен инвентаря
 namespace inventory;
 
-public partial class DropItem : Node2D
+public abstract partial class DropItem : Node2D
 {
 	/// <summary>
 	///  родительский класс дропа предметов
@@ -14,9 +14,34 @@ public partial class DropItem : Node2D
     public int Value = 1; // Значение предмета, например, количество ресурсов
 
 
-    public virtual void OnPickUp()
+    // Определяем событие на основе делегата в родительском классе
+    public static event Action<Texture, string> ItemPickedUp;
+
+    protected Texture ItemTexture;
+    protected string ItemName;
+
+    public override void _Ready()
     {
-        // Логика, которая выполняется при поднятии предмета
-        GD.Print("Item picked up by player");
+        // Общая логика для всех предметов
+        ItemTexture = GetNode<Sprite2D>("ItemTexture").Texture;
+        var ItemPickUpArea = GetNode<Area2D>("CollisionArea");
+
+        ItemPickUpArea.BodyEntered += OnPickUpAreaBodyEntered;
     }
+
+
+    protected virtual void OnPickUpAreaBodyEntered(Node body)
+    {
+        if (body.Name == "Player")
+        {
+            //GD.Print($"{ItemName} picked up");
+
+            // Вызываем событие
+            ItemPickedUp?.Invoke(ItemTexture, ItemName);
+
+            QueueFree(); // Удаляем предмет после поднятия
+        }
+    }
+
+
 }
