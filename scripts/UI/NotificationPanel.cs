@@ -1,6 +1,7 @@
 ﻿using Godot;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace inventory;
 
@@ -9,25 +10,37 @@ public partial class NotificationPanel : Control
     [Export]
     public Font NotificationFont { get; set; } // Экспортируемое свойство для шрифта
 
+    [Export]
+    public int fontSize { get; set; } //размер шрифта
+
+    [Export]
+    public Color ShadowColor { get; set; } = Colors.Black; // Цвет тени
+
     private VBoxContainer _notificationContainer; // Контейнер для уведомлений
-    private List<Control> _notifications = new List<Control>();
+    private Dictionary<string, Label> _notificationLabels = new Dictionary<string, Label>(); // Хранит ссылки на уведомления для объединения
+    private Dictionary<string, int> _itemCounts = new Dictionary<string, int>(); // Хранит количество предметов
 
     public override void _Ready()
     {
-        _notificationContainer = GetNode<VBoxContainer>("GridContainer/Notifier1"); // Используем VBoxContainer
+        _notificationContainer = GetNode<VBoxContainer>("GridContainer/Notifier1");
         DropItem.ItemPickedUp += ShowPickupNotification;
     }
 
     public void ShowPickupNotification(Texture itemIcon, string itemName)
     {
+        // Если уведомление для данного предмета уже существует, обновляем его
+        if (_notificationLabels.ContainsKey(itemName))
+        {
+            _itemCounts[itemName]++;
+            _notificationLabels[itemName].Text = $"Игрок подобрал x{_itemCounts[itemName]} {itemName}";
+            return; // Прерываем выполнение, т.к. уведомление уже обновлено
+        }
+
         // Проверяем и преобразуем Texture в Texture2D, если это необходимо
         Texture2D itemIcon2D = itemIcon as Texture2D;
-        
 
         // Создаем новый HBoxContainer для размещения иконки и текста горизонтально
         HBoxContainer notification = new HBoxContainer();
-        
-
 
         // Добавляем текстовое уведомление
         Label label = new Label();
@@ -37,34 +50,35 @@ public partial class NotificationPanel : Control
         if (NotificationFont != null)
         {
             label.AddThemeFontOverride("font", NotificationFont);
+            label.AddThemeFontSizeOverride("font_size", fontSize);
+            //label.AddThemeConstantOverride("shadow", 7); // не робит
+            label.AddThemeColorOverride("font_shadow_color", ShadowColor);
         }
         notification.AddChild(label);
 
-
         // Добавляем отступ
         Control spacer = new Control();
-        spacer.CustomMinimumSize = new Vector2(3, 0); // Устанавливаем минимальный размер для создания отступа
+        spacer.CustomMinimumSize = new Vector2(3, 0);
         notification.AddChild(spacer);
 
         // Добавляем иконку предмета
         TextureRect icon = new TextureRect();
-        icon.Texture = itemIcon2D; // Установка текстуры
-        icon.Scale = new Vector2(2, 2); // Установка масштаба (можно изменить по необходимости)
+        icon.Texture = itemIcon2D;
+        icon.Scale = new Vector2(2, 2);
         notification.AddChild(icon);
 
-
-        // Создаем контейнер для уведомления и добавляем в него HBoxContainer
-        VBoxContainer notificationWrapper = new VBoxContainer(); // Используем VBoxContainer для вертикального размещения
-        notificationWrapper.AddChild(notification);
-
         // Добавляем уведомление в контейнер
-        _notificationContainer.AddChild(notificationWrapper);
-        _notifications.Add(notificationWrapper);
+        _notificationContainer.AddChild(notification);
 
-        // Удаляем уведомление через 4 секунды
+        // Сохраняем ссылку на Label и счетчик предметов
+        _notificationLabels[itemName] = label;
+        _itemCounts[itemName] = 1;
+
+        // Удаляем уведомление через 8 секунд
         var timer = new Timer();
         timer.WaitTime = 8.0f;
         timer.OneShot = true;
+        //timer.Autostart = true; // Устанавливаем AutoStart в true
         timer.Connect("timeout", new Callable(this, nameof(OnNotificationTimeout)));
         AddChild(timer);
         timer.Start();
@@ -72,12 +86,23 @@ public partial class NotificationPanel : Control
 
     private void OnNotificationTimeout()
     {
-        if (_notifications.Count > 0)
+        // Находим уведомление, которое нужно удалить
+        foreach (var notification in _notificationContainer.GetChildren())
         {
-            var notification = _notifications[0];
-            _notificationContainer.RemoveChild(notification);
-            notification.QueueFree();
-            _notifications.RemoveAt(0);
+            if (notification is Control control)
+            {
+                _notificationContainer.RemoveChild(control);
+                control.QueueFree();
+                //break; // Удаляем только первое уведомление
+            }
+        }
+
+        // Удаляем уведомление из списка
+        if (_notificationLabels.Count > 0)
+        {
+            var firstItem = _notificationLabels.Keys.First();
+            _notificationLabels.Remove(firstItem);
+            _itemCounts.Remove(firstItem);
         }
     }
 }

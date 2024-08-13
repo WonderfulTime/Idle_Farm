@@ -13,6 +13,8 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_irgdl")
 NotificationFont = ExtResource("2_mkkn6")
+fontSize = 20
+ShadowColor = Color(0.0980392, 0.0980392, 0.0901961, 1)
 
 [node name="GridContainer" type="GridContainer" parent="."]
 layout_mode = 1
