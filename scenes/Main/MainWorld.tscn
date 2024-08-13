@@ -137,6 +137,9 @@ remote_path = NodePath("../../../../Camera2D")
 [node name="Surroundings" type="Node2D" parent="World"]
 y_sort_enabled = true
 
+[node name="Drops" type="Node2D" parent="World/Surroundings"]
+editor_description = "Нода куда будет помещен весь дроп"
+
 [node name="Tree_1" parent="World/Surroundings" instance=ExtResource("6_jjqon")]
 position = Vector2(-164, 96)
 

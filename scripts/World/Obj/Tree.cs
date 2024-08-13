@@ -59,7 +59,8 @@ public partial class Tree : Node2D
         if (_animatedSprite_1.Animation == "falling" && isChopped)
         {
             dropSystem.DropItems(DropItemScene, Position, ItemCount, DropChance);
-            //CallDeferred("queue_free");
+
+            CallDeferred("queue_free");
         }
     }
 }

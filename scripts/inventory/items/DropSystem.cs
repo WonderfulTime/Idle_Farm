@@ -11,9 +11,15 @@ public partial class DropSystem : Node2D
     /// <param name="position"></param>
     /// <param name="itemCount"></param>
     /// <param name="dropChance"></param>
+
+    private GameProfileManager profileManager;
+
     public void DropItems(PackedScene dropItemScene, Vector2 position, int itemCount, float dropChance)
     {
         Random random = new Random();
+
+        profileManager = GetNode<GameProfileManager>("/root/GameProfileManager");
+        Node2D dropsNode = GetNode<Node2D>(profileManager.GlobalItemDropsNode);
 
         for (int i = 0; i < itemCount; i++)
         {
@@ -22,9 +28,11 @@ public partial class DropSystem : Node2D
                 DropItem drop = (DropItem)dropItemScene.Instantiate();
                 //drop.Position = position + new Vector2((float)GD.RandRange(-10, 10), (float)GD.RandRange(-10, 10));
                 //drop.Position = position;
-                drop.Position = new Vector2((float)GD.RandRange(0, 40), (float)GD.RandRange(0, 10));
-                GetParent().CallDeferred("add_child", drop);
+                drop.GlobalPosition = position + new Vector2((float)GD.RandRange(0, 40), (float)GD.RandRange(0, 10));
+                dropsNode.CallDeferred("add_child", drop);
                 //GD.Print(drop.Position);
+
+                
             }
         }
     }

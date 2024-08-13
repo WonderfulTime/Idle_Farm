@@ -24,12 +24,12 @@ offset_top = -449.0
 offset_right = 509.0
 grow_vertical = 0
 theme_override_constants/h_separation = 10
-theme_override_constants/v_separation = 20
+theme_override_constants/v_separation = 10
 
 [node name="Notifier1" type="VBoxContainer" parent="GridContainer"]
 custom_minimum_size = Vector2(500, 50)
 layout_mode = 2
-theme_override_constants/separation = 20
+theme_override_constants/separation = 10
 
 [node name="HBoxContainer" type="HBoxContainer" parent="GridContainer/Notifier1"]
 visible = false

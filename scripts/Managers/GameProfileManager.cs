@@ -26,4 +26,5 @@ public partial class GameProfileManager : Node, IGameProfileManager
 
 	public string playerUIManagerPath = "/root/Main/World/PlayerNode/Player/UI";
 	public string inventoryGUIPath = "/root/Main/Camera2D/GUICanvas/InventoryNode/InventoryGUI";
+	public string GlobalItemDropsNode = "/root/Main/World/Surroundings/Drops";
 }

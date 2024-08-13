@@ -29,6 +29,12 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("6_skwij")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_skwij")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_skwij")
 }],
 "loop": false,
 "name": &"falling",
@@ -57,7 +63,7 @@ DropChance = 0.6
 [node name="TreeAnimation" type="AnimatedSprite2D" parent="."]
 position = Vector2(28, -51)
 sprite_frames = SubResource("SpriteFrames_xsp5m")
-animation = &"idle"
+animation = &"falling"
 autoplay = "idle"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
