@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxefyk7i2bu1q"]
+
+[ext_resource type="Texture2D" uid="uid://co15jlut4qweh" path="res://assets/UI/icons/buttons/Planting_icon.png" id="1_0kowj"]
+[ext_resource type="Script" path="res://scripts/UI/NotificationPanel.cs" id="1_irgdl"]
+[ext_resource type="FontFile" uid="uid://kr1umv07nyrc" path="res://assets/Fonts/fibberish.ttf" id="2_mkkn6"]
+
+[node name="NotificationPanel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_irgdl")
+NotificationFont = ExtResource("2_mkkn6")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = -449.0
+offset_right = 509.0
+grow_vertical = 0
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 20
+
+[node name="Notifier1" type="VBoxContainer" parent="GridContainer"]
+custom_minimum_size = Vector2(500, 50)
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GridContainer/Notifier1"]
+visible = false
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="GridContainer/Notifier1/HBoxContainer"]
+custom_minimum_size = Vector2(350, 50)
+layout_mode = 2
+text = "Игрок \"ABOBA\" подобрал \"Снежное полено\""
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/Notifier1/HBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture = ExtResource("1_0kowj")

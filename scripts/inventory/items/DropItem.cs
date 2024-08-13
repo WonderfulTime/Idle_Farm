@@ -16,6 +16,7 @@ public abstract partial class DropItem : Node2D
 
     // Определяем событие на основе делегата в родительском классе
     public static event Action<Texture, string> ItemPickedUp;
+    
 
     protected Texture ItemTexture;
     protected string ItemName;
@@ -38,6 +39,7 @@ public abstract partial class DropItem : Node2D
 
             // Вызываем событие
             ItemPickedUp?.Invoke(ItemTexture, ItemName);
+
 
             QueueFree(); // Удаляем предмет после поднятия
         }

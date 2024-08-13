@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dwm6y2p021rxb"]
+[gd_scene load_steps=13 format=3 uid="uid://dwm6y2p021rxb"]
 
 [ext_resource type="Script" path="res://scripts/Managers/GameManager.cs" id="1_itghg"]
 [ext_resource type="Texture2D" uid="uid://dyl4tiw1o3uxg" path="res://assets/surroundings/world/ground/grass/Grass.png" id="2_6wr1b"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://c27h5hjb5ivxd" path="res://scenes/World/Surroundings/trees/tree_1.tscn" id="6_jjqon"]
 [ext_resource type="PackedScene" uid="uid://blitck8kc3fik" path="res://scenes/UI/other/tips.tscn" id="7_k8nno"]
 [ext_resource type="Script" path="res://scripts/inventory/InventoryGUI.cs" id="7_tsnml"]
+[ext_resource type="PackedScene" uid="uid://dxefyk7i2bu1q" path="res://scenes/UI/other/notification_panel.tscn" id="10_vesje"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3lbdx"]
 texture = ExtResource("2_6wr1b")
@@ -190,3 +191,5 @@ grow_vertical = 1
 scale = Vector2(3, 3)
 size_flags_horizontal = 6
 size_flags_vertical = 6
+
+[node name="NotificationPanel" parent="Camera2D/GUICanvas" instance=ExtResource("10_vesje")]
