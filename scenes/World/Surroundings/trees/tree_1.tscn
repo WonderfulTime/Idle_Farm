@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://c27h5hjb5ivxd"]
+[gd_scene load_steps=13 format=3 uid="uid://c27h5hjb5ivxd"]
 
 [ext_resource type="Texture2D" uid="uid://b7s77rcspl0wq" path="res://assets/surroundings/world/trees/tree1/falling_tree_1.png" id="1_73i8m"]
 [ext_resource type="Script" path="res://scripts/World/Obj/Tree.cs" id="1_v4auj"]
 [ext_resource type="Texture2D" uid="uid://c0hf3uwcr0fhg" path="res://assets/surroundings/world/trees/tree1/falling_tree_2.png" id="2_46g0i"]
 [ext_resource type="PackedScene" uid="uid://bydo7pvaj7g80" path="res://scenes/World/items/wood/wood_log_tier_1.tscn" id="2_t8tco"]
+[ext_resource type="PackedScene" uid="uid://dvvvc6he7lpjd" path="res://scenes/World/items/food/red_apple.tscn" id="3_8tla7"]
 [ext_resource type="Texture2D" uid="uid://b3knlcernph75" path="res://assets/surroundings/world/trees/tree1/falling_tree_3.png" id="3_ke37f"]
 [ext_resource type="Texture2D" uid="uid://b0lkanlbcfwg" path="res://assets/surroundings/world/trees/tree1/falling_tree_4.png" id="4_o75ap"]
 [ext_resource type="Texture2D" uid="uid://dq4gcmoqowjs6" path="res://assets/surroundings/world/trees/tree1/falling_tree_5.png" id="5_0ulko"]
@@ -57,8 +58,8 @@ radius = 19.0
 
 [node name="Tree_1" type="Node2D"]
 script = ExtResource("1_v4auj")
-DropItemScene = ExtResource("2_t8tco")
-DropChance = 0.6
+WoodScene = ExtResource("2_t8tco")
+AppleScene = ExtResource("3_8tla7")
 
 [node name="TreeAnimation" type="AnimatedSprite2D" parent="."]
 position = Vector2(28, -51)

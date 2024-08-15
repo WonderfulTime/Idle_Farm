@@ -19,7 +19,7 @@ public partial class InventoryManager: Node
         DropItem.ItemPickedUp += AddItemToInventory;
     }
 
-    public void AddItemToInventory(Texture ItemTexture, string ItemName)
+    public void AddItemToInventory(string ItemName, int MaxStack, Texture ItemTexture)
     {
         /// функция вызываемая при добавлении предмета в инвентарь
         /// 

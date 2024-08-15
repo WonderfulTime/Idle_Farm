@@ -9,6 +9,7 @@ size = Vector2(26, 9)
 [node name="WoodLog_tier1" type="Node2D"]
 scale = Vector2(0.8, 0.8)
 script = ExtResource("1_mdjoq")
+MaxStack = 128
 
 [node name="ItemTexture" type="Sprite2D" parent="."]
 texture = ExtResource("2_pxa0u")

@@ -26,7 +26,7 @@ public partial class NotificationPanel : Control
         DropItem.ItemPickedUp += ShowPickupNotification;
     }
 
-    public void ShowPickupNotification(Texture itemIcon, string itemName)
+    public void ShowPickupNotification(string itemName, int MaxStack, Texture itemIcon)
     {
         // Если уведомление для данного предмета уже существует, обновляем его
         if (_notificationLabels.ContainsKey(itemName))

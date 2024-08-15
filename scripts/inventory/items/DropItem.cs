@@ -13,9 +13,10 @@ public abstract partial class DropItem : Node2D
     [Export]
     public int Value = 1; // Значение предмета, например, количество ресурсов
 
-
+    [Export]
+    public int MaxStack = 64; // Значение максимума стака этого предмета
     // Определяем событие на основе делегата в родительском классе
-    public static event Action<Texture, string> ItemPickedUp;
+    public static event Action<string, int, Texture> ItemPickedUp;
     
 
     protected Texture ItemTexture;
@@ -38,7 +39,7 @@ public abstract partial class DropItem : Node2D
             //GD.Print($"{ItemName} picked up");
 
             // Вызываем событие
-            ItemPickedUp?.Invoke(ItemTexture, ItemName);
+            ItemPickedUp?.Invoke(ItemName, MaxStack, ItemTexture);
 
 
             QueueFree(); // Удаляем предмет после поднятия

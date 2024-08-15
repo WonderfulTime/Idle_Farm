@@ -1,6 +1,7 @@
 ﻿using Godot;
 using inventory;
 using System;
+using System.Collections.Generic;
 
 public partial class Tree : Node2D
 {
@@ -9,17 +10,20 @@ public partial class Tree : Node2D
     /// </summary>
 
     [Export]
-    public PackedScene DropItemScene;
+    public PackedScene WoodScene;
 
     [Export]
-    public int ItemCount = 3;
-
-    [Export]
-    public float DropChance = 0.5f;
+    public PackedScene AppleScene;
 
     private bool isChopped = false;
     private DropSystem dropSystem;
 
+    private List<DropItemInfo> dropsItems;
+
+    // массив со сценами дропа
+    public PackedScene[] ArrDropItemScenes;
+    // массив с шансами на дроп предметов
+    public float[] ArrDropItemChances;
 
     private AnimatedSprite2D _animatedSprite_1;
 
@@ -29,6 +33,16 @@ public partial class Tree : Node2D
         var area = GetNode<Area2D>("ChopZone");
         area.BodyEntered += OnTreeBodyEntered;
         _animatedSprite_1.AnimationFinished += OnAnimationFinished;
+
+
+        dropsItems = new List<DropItemInfo>
+        {
+            /// хар-ки дропа предметов, сцена предмета, шанс дропа, макс кол-во
+            new DropItemInfo(WoodScene, 1f,  3), // 50% шанс дропа,  3 штуки дерева
+            new DropItemInfo(AppleScene, 1f,  2), 
+           
+        };
+
 
 
         dropSystem = new DropSystem();
@@ -58,7 +72,7 @@ public partial class Tree : Node2D
     {
         if (_animatedSprite_1.Animation == "falling" && isChopped)
         {
-            dropSystem.DropItems(DropItemScene, Position, ItemCount, DropChance);
+            dropSystem.DropItems(dropsItems, Position);
 
             CallDeferred("queue_free");
         }
