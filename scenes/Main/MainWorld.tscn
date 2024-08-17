@@ -141,13 +141,25 @@ y_sort_enabled = true
 editor_description = "Нода куда будет помещен весь дроп"
 
 [node name="Tree_1" parent="World/Surroundings" instance=ExtResource("6_jjqon")]
-position = Vector2(-164, 96)
+position = Vector2(-229, 157)
 
 [node name="Tree_2" parent="World/Surroundings" instance=ExtResource("6_jjqon")]
-position = Vector2(-77, 190)
+position = Vector2(-270, 85)
 
 [node name="Tree_3" parent="World/Surroundings" instance=ExtResource("6_jjqon")]
-position = Vector2(-441, 137)
+position = Vector2(-412, 94)
+
+[node name="Tree_4" parent="World/Surroundings" instance=ExtResource("6_jjqon")]
+position = Vector2(-315, 104)
+
+[node name="Tree_5" parent="World/Surroundings" instance=ExtResource("6_jjqon")]
+position = Vector2(-291, 202)
+
+[node name="Tree_6" parent="World/Surroundings" instance=ExtResource("6_jjqon")]
+position = Vector2(-365, 56)
+
+[node name="Tree_7" parent="World/Surroundings" instance=ExtResource("6_jjqon")]
+position = Vector2(-362, 133)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, 33)

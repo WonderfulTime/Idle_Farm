@@ -10,6 +10,7 @@ size = Vector2(26, 9)
 scale = Vector2(0.8, 0.8)
 script = ExtResource("1_mdjoq")
 MaxStack = 128
+itemID = 1
 
 [node name="ItemTexture" type="Sprite2D" parent="."]
 texture = ExtResource("2_pxa0u")

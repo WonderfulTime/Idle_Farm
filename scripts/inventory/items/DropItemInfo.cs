@@ -1,23 +1,25 @@
-using Godot;
+п»їusing Godot;
 using System;
 using System.Collections.Generic;
 
 namespace inventory;
 
 /// <summary>
-/// базовый класс, в котором расписаны все свойства предметов, которые дропаются с объектов
-/// например, сцена предмета дропа, шанс дропа, количество предметов
+/// Р±Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ, РІ РєРѕС‚РѕСЂРѕРј СЂР°СЃРїРёСЃР°РЅС‹ РІСЃРµ СЃРІРѕР№СЃС‚РІР° РїСЂРµРґРјРµС‚РѕРІ, РєРѕС‚РѕСЂС‹Рµ РґСЂРѕРїР°СЋС‚СЃСЏ СЃ РѕР±СЉРµРєС‚РѕРІ
+/// РЅР°РїСЂРёРјРµСЂ, СЃС†РµРЅР° РїСЂРµРґРјРµС‚Р° РґСЂРѕРїР°, С€Р°РЅСЃ РґСЂРѕРїР°, РєРѕР»РёС‡РµСЃС‚РІРѕ РїСЂРµРґРјРµС‚РѕРІ
 /// </summary>
 public class DropItemInfo
 {
     public PackedScene DropScene { get; set; }
     public float DropChance { get; set; }
     public int MaxCount { get; set; }
+   
 
     public DropItemInfo(PackedScene dropScene, float dropChance, int maxCount)
     {
         DropScene = dropScene;
         DropChance = dropChance;
         MaxCount = maxCount;
+       
     }
 }

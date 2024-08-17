@@ -72,13 +72,18 @@ public class Item
 {
     public string Name { get; set; }
     public int MaxStack { get; set; }
-    public Texture2D Icon { get; set; } // Иконка предмета
+    public Texture Icon { get; set; } // Иконка предмета
+    public int Value    { get; set; }
+    public int ItemID { get; set; }
 
-    public Item(string name, int maxStack, Texture2D icon)
+    public Item(string name, int maxStack, Texture2D icon, int value, int itemID)
     {
         Name = name;
         MaxStack = maxStack;
         Icon = icon;
+        Value = value;
+        ItemID = itemID;
+
     }
 }
 

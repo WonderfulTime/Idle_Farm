@@ -11,9 +11,11 @@ public partial class Tree : Node2D
 
     [Export]
     public PackedScene WoodScene;
+    
 
     [Export]
     public PackedScene AppleScene;
+    
 
     private bool isChopped = false;
     private DropSystem dropSystem;
