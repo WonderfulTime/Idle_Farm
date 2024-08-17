@@ -32,7 +32,7 @@ public partial class InventoryManager: Node
         }
     }
 
-    public void AddItemToInventory(string ItemName, int MaxStack, Texture ItemTexture, int ItemValue, int ItemID)
+    public int AddItemToInventory(string ItemName, int MaxStack, Texture ItemTexture, int ItemValue, int ItemID)
     {
         /// функция вызываемая при добавлении предмета в инвентарь
         /// 
@@ -41,26 +41,44 @@ public partial class InventoryManager: Node
         // Создаем новый объект Item, передавая необходимые аргументы в конструктор
         item = new Item(ItemName, MaxStack, ItemTexture as Texture2D, ItemValue, ItemID);
 
-        //item = new Item
-        //{
-        //    Name = ItemName,
-        //    MaxStack = MaxStack,
-        //    Icon = ItemTexture as Texture2D
-
-        //};
-
-        int availableSlot = FindAvailableSlot(item); // нахождение одинакового или свободного слота
-        //int availableSlot = 1;
-
-        if (availableSlot >= 0)
+        int remainingValue = ItemValue; // Остаток предметов, которые нужно распределить
+        while (remainingValue > 0) // Продолжаем распределение предметов, пока есть остаток
         {
-            // Обновляем слот с новым предметом
-            UpdateSlot(availableSlot, item.Icon, item.Value);
+            int availableSlot = FindAvailableSlot(item);
+
+            if (availableSlot >= 0)
+            {
+                // Получаем текущий слот и количество предметов в нем
+                var itemCountNode = inventorySlots[availableSlot].GetNode<Label>("CenterContainer/Panel/ItemCount");
+                int currentCount = Convert.ToInt32(itemCountNode.Text);
+
+                int availableSpace = item.MaxStack - currentCount; // Сколько предметов можно добавить в этот слот
+                if (remainingValue <= availableSpace)
+                {
+                    // Если остаток меньше или равен доступному месту, добавляем всё в этот слот
+                    UpdateSlot(availableSlot, item.Icon, remainingValue);
+                    remainingValue = 0; // Остаток распределен
+                }
+            else
+                {
+                    // Если остаток больше, чем доступное место, заполняем слот до максимума и уменьшаем остаток
+                    UpdateSlot(availableSlot, item.Icon, availableSpace);
+                    remainingValue -= availableSpace;
+                }
+            }
+            else
+            {
+                GD.Print("Нет доступных слотов.");
+                
+                return remainingValue; // Если нет доступных слотов, прекращаем добавление предметов
+                
+            }
         }
 
-        GD.Print($"Текстура{ItemTexture} в инвентаре");
+       
+        GD.Print($"Текстура {ItemTexture} в инвентаре");
         GD.Print($"Предмет {ItemName} в инвентаре");
-        
+        return remainingValue;
     }
 
 
@@ -103,7 +121,7 @@ public partial class InventoryManager: Node
             var itemCountNode = inventorySlots[i].GetNode<Label>("CenterContainer/Panel/ItemCount");
             var itemCount = Convert.ToInt32(itemCountNode.Text);
 
-            if (itemNode.Texture == null || itemNode.Texture == item.Icon &&  (itemCount) != item.MaxStack) // Свободный слот или одинаковый предмет и не максимум предмета в стаке
+            if ((itemNode.Texture == null || itemNode.Texture == item.Icon) &&  (itemCount) != item.MaxStack) // Свободный слот или одинаковый предмет и не максимум предмета в стаке
             {
                 return i;
             }

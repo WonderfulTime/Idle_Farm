@@ -18,8 +18,12 @@ public abstract partial class DropItem : Node2D
 
     [Export] public int itemID;
     // Определяем событие на основе делегата в родительском классе
-    public static event Action<string, int, Texture, int, int> ItemPickedUp;
-    
+    //public static event Action<string, int, Texture, int, int> ItemPickedUp;
+
+    public delegate int ItemPickedUpHandler(string ItemName, int MaxStack, Texture ItemTexture, int Value, int itemID);
+    public static event ItemPickedUpHandler ItemPickedUp;
+    public static event Action<string, int, Texture, int, int> NotificationItemPickedUp;
+
 
     protected Texture ItemTexture;
     protected string ItemName;
@@ -41,10 +45,35 @@ public abstract partial class DropItem : Node2D
             //GD.Print($"{ItemName} picked up");
 
             // Вызываем событие
-            ItemPickedUp?.Invoke(ItemName, MaxStack, ItemTexture, Value, itemID);
+            int remainingItemValue = ItemPickedUp?.Invoke(ItemName, MaxStack, ItemTexture, Value, itemID) ?? Value;
+
+            if (remainingItemValue == Value) // случай когда ни один предмет не взялся с пола
+            {
+                GD.Print($"Предмет не может быть подобран");
+
+            }
 
 
-            QueueFree(); // Удаляем предмет после поднятия
+            else if (remainingItemValue > 0) // если 
+            {
+                var addingValue = Value - remainingItemValue; // сколько предметов добавленно в инвентарь
+                Value = remainingItemValue; // сколько предметов осталось на земле
+
+                NotificationItemPickedUp?.Invoke(ItemName, MaxStack, ItemTexture, addingValue, itemID); // уведомление о поднятие предмета
+
+                GD.Print($"Остаток {ItemName} не добавленный в инвентарь {Value}"); // дебаг сколько предметов осталось на земле
+                
+            }
+            
+            else /*(remainingItemValue <=0)*/
+            {
+                NotificationItemPickedUp?.Invoke(ItemName, MaxStack, ItemTexture, Value, itemID); // уведомление о поднятие предмета
+                QueueFree();
+            }
+
+            //if (ispickedUP == true)
+            //{ QueueFree(); }// Удаляем предмет после поднятия
+            
         }
     }
 

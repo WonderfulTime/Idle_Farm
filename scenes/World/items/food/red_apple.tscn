@@ -10,6 +10,7 @@ radius = 10.1119
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_8u6ic")
 Value = 32
+MaxStack = 5
 itemID = 2
 
 [node name="ItemTexture" type="Sprite2D" parent="."]

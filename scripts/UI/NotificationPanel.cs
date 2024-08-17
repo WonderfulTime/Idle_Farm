@@ -23,7 +23,7 @@ public partial class NotificationPanel : Control
     public override void _Ready()
     {
         _notificationContainer = GetNode<VBoxContainer>("GridContainer/Notifier1");
-        DropItem.ItemPickedUp += ShowPickupNotification;
+        DropItem.NotificationItemPickedUp += ShowPickupNotification;
     }
 
     public void ShowPickupNotification(string itemName, int MaxStack, Texture itemIcon, int Value, int itemID)
@@ -31,7 +31,7 @@ public partial class NotificationPanel : Control
         // Если уведомление для данного предмета уже существует, обновляем его
         if (_notificationLabels.ContainsKey(itemName))
         {
-            _itemCounts[itemName]++;
+            _itemCounts[itemName] += Value;
             _notificationLabels[itemName].Text = $"Игрок подобрал x{_itemCounts[itemName]} {itemName}";
             return; // Прерываем выполнение, т.к. уведомление уже обновлено
         }
@@ -43,8 +43,9 @@ public partial class NotificationPanel : Control
         HBoxContainer notification = new HBoxContainer();
 
         // Добавляем текстовое уведомление
+        // самое первое уведомление при вызове
         Label label = new Label();
-        label.Text = $"Игрок подобрал {itemName}";
+        label.Text = $"Игрок подобрал x{Value} {itemName}";
 
         // Применяем шрифт, если он задан
         if (NotificationFont != null)
@@ -70,9 +71,23 @@ public partial class NotificationPanel : Control
         // Добавляем уведомление в контейнер
         _notificationContainer.AddChild(notification);
 
-        // Сохраняем ссылку на Label и счетчик предметов
+        // Сохраняем ссылку на Label и счетчик предметов, позволяет избавиться от дубликатов
         _notificationLabels[itemName] = label;
-        _itemCounts[itemName] = 1;
+        _itemCounts[itemName] = Value;
+
+
+        // Создаем Tween для анимации
+        Tween tween = GetTree().CreateTween();
+        tween.TweenProperty(notification, "scale", new Vector2(1.2f, 1.2f), 0.2f)
+            .SetTrans(Tween.TransitionType.Sine)
+            .SetEase(Tween.EaseType.InOut);
+
+        tween.TweenProperty(notification, "scale", new Vector2(1.0f, 1.0f), 0.2f)
+            .SetTrans(Tween.TransitionType.Sine)
+            .SetEase(Tween.EaseType.InOut);
+
+
+
 
         // Удаляем уведомление через 8 секунд
         var timer = new Timer();
