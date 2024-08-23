@@ -24,7 +24,7 @@ public partial class InventoryManager: Node
         DropItem.ItemPickedUp += AddItemToInventory;
 
         //указываем ссылку на слоты в инвентаре
-        var gridContainer = GetNode<GridContainer>($"{profileManager.inventoryGUIPath}/NinePatchRect/GridContainer");
+        var gridContainer = GetNode<GridContainer>($"{profileManager.inventoryGUIPath}/BaseInventory/GridContainer");
 
         foreach (Control slot in gridContainer.GetChildren()) // добавляем в массив слотов слоты из сцены инвентаря
         {
@@ -157,4 +157,11 @@ public partial class InventoryManager: Node
 
                 
     }
+
+
+
+
+
+
+
 }

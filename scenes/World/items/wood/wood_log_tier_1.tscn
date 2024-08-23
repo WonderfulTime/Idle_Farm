@@ -9,7 +9,7 @@ size = Vector2(26, 9)
 [node name="WoodLog_tier1" type="Node2D"]
 scale = Vector2(0.8, 0.8)
 script = ExtResource("1_mdjoq")
-Value = 68
+Value = 2
 MaxStack = 20
 itemID = 1
 

@@ -9,7 +9,6 @@ radius = 10.1119
 [node name="RedApple" type="Node2D"]
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_8u6ic")
-Value = 32
 MaxStack = 5
 itemID = 2
 

@@ -23,6 +23,7 @@ public partial class NotificationPanel : Control
     public override void _Ready()
     {
         _notificationContainer = GetNode<VBoxContainer>("GridContainer/Notifier1");
+        MouseFilter = Control.MouseFilterEnum.Ignore; // игнор нажатий на панель уведомлений, чтобы не было перехвата инпутов мишки
         DropItem.NotificationItemPickedUp += ShowPickupNotification;
     }
 

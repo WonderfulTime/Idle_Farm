@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://c2auh4r3uxuys"]
+[gd_scene load_steps=6 format=3 uid="uid://c2auh4r3uxuys"]
 
-[ext_resource type="Texture2D" uid="uid://cv8f4j0db2jaj" path="res://assets/UI/inventory/inventory_background.png" id="1_ivlq5"]
+[ext_resource type="Texture2D" uid="uid://bjcgbkji5ruhk" path="res://assets/UI/inventory/inventory_background_2.png" id="1_ufdli"]
 [ext_resource type="PackedScene" uid="uid://0jh50iedien3" path="res://scenes/UI/inventory/InventorySlot.tscn" id="2_0fobh"]
+[ext_resource type="PackedScene" uid="uid://771ivky1utdj" path="res://scenes/UI/inventory/AgriculturePanel.tscn" id="3_873lx"]
 [ext_resource type="Texture2D" uid="uid://b3jh8gom7pwoi" path="res://assets/UI/icons/buttons/inventory_buttons/inventory_bag_frame_icon.png" id="3_kk1m2"]
 [ext_resource type="Texture2D" uid="uid://80ja1gawootp" path="res://assets/UI/icons/buttons/inventory_buttons/inventory_agrocultureStock_icon.png" id="5_ic3wv"]
 
@@ -16,17 +17,17 @@ offset_bottom = -727.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="NinePatchRect" type="NinePatchRect" parent="."]
+[node name="BaseInventory" type="NinePatchRect" parent="."]
 layout_mode = 0
 offset_right = 200.0
 offset_bottom = 74.0
-texture = ExtResource("1_ivlq5")
-patch_margin_left = 6
-patch_margin_top = 6
-patch_margin_right = 6
-patch_margin_bottom = 6
+texture = ExtResource("1_ufdli")
+patch_margin_left = 7
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
 
-[node name="GridContainer" type="GridContainer" parent="NinePatchRect"]
+[node name="GridContainer" type="GridContainer" parent="BaseInventory"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -41,148 +42,192 @@ grow_horizontal = 2
 grow_vertical = 2
 columns = 12
 
-[node name="InventorySlot" parent="NinePatchRect/GridContainer" instance=ExtResource("2_0fobh")]
+[node name="InventorySlot" parent="BaseInventory/GridContainer" instance=ExtResource("2_0fobh")]
 layout_mode = 2
 
-[node name="InventorySlot2" parent="NinePatchRect/GridContainer" instance=ExtResource("2_0fobh")]
+[node name="InventorySlot2" parent="BaseInventory/GridContainer" instance=ExtResource("2_0fobh")]
 layout_mode = 2
 
-[node name="InventorySlot3" parent="NinePatchRect/GridContainer" instance=ExtResource("2_0fobh")]
+[node name="InventorySlot3" parent="BaseInventory/GridContainer" instance=ExtResource("2_0fobh")]
 layout_mode = 2
 
-[node name="InventorySlot4" parent="NinePatchRect/GridContainer" instance=ExtResource("2_0fobh")]
+[node name="InventorySlot4" parent="BaseInventory/GridContainer" instance=ExtResource("2_0fobh")]
 layout_mode = 2
 
-[node name="InventorySlot5" parent="NinePatchRect/GridContainer" instance=ExtResource("2_0fobh")]
+[node name="InventorySlot5" parent="BaseInventory/GridContainer" instance=ExtResource("2_0fobh")]
 layout_mode = 2
 
-[node name="InventorySlot6" parent="NinePatchRect/GridContainer" instance=ExtResource("2_0fobh")]
+[node name="InventorySlot6" parent="BaseInventory/GridContainer" instance=ExtResource("2_0fobh")]
 layout_mode = 2
 
-[node name="InventorySlot7" parent="NinePatchRect/GridContainer" instance=ExtResource("2_0fobh")]
+[node name="InventorySlot7" parent="BaseInventory/GridContainer" instance=ExtResource("2_0fobh")]
 layout_mode = 2
 
-[node name="InventorySlot8" parent="NinePatchRect/GridContainer" instance=ExtResource("2_0fobh")]
+[node name="InventorySlot8" parent="BaseInventory/GridContainer" instance=ExtResource("2_0fobh")]
 layout_mode = 2
 
-[node name="InventorySlot9" parent="NinePatchRect/GridContainer" instance=ExtResource("2_0fobh")]
+[node name="InventorySlot9" parent="BaseInventory/GridContainer" instance=ExtResource("2_0fobh")]
 layout_mode = 2
 
-[node name="InventorySlot10" parent="NinePatchRect/GridContainer" instance=ExtResource("2_0fobh")]
+[node name="InventorySlot10" parent="BaseInventory/GridContainer" instance=ExtResource("2_0fobh")]
 layout_mode = 2
 
-[node name="InventorySlot11" parent="NinePatchRect/GridContainer" instance=ExtResource("2_0fobh")]
+[node name="InventorySlot11" parent="BaseInventory/GridContainer" instance=ExtResource("2_0fobh")]
 layout_mode = 2
 
-[node name="InventorySlot12" parent="NinePatchRect/GridContainer" instance=ExtResource("2_0fobh")]
+[node name="InventorySlot12" parent="BaseInventory/GridContainer" instance=ExtResource("2_0fobh")]
 layout_mode = 2
 
-[node name="InventorySlot13" parent="NinePatchRect/GridContainer" instance=ExtResource("2_0fobh")]
+[node name="InventorySlot13" parent="BaseInventory/GridContainer" instance=ExtResource("2_0fobh")]
 layout_mode = 2
 
-[node name="InventorySlot14" parent="NinePatchRect/GridContainer" instance=ExtResource("2_0fobh")]
+[node name="InventorySlot14" parent="BaseInventory/GridContainer" instance=ExtResource("2_0fobh")]
 layout_mode = 2
 
-[node name="InventorySlot15" parent="NinePatchRect/GridContainer" instance=ExtResource("2_0fobh")]
+[node name="InventorySlot15" parent="BaseInventory/GridContainer" instance=ExtResource("2_0fobh")]
 layout_mode = 2
 
-[node name="InventorySlot16" parent="NinePatchRect/GridContainer" instance=ExtResource("2_0fobh")]
+[node name="InventorySlot16" parent="BaseInventory/GridContainer" instance=ExtResource("2_0fobh")]
 layout_mode = 2
 
-[node name="InventorySlot17" parent="NinePatchRect/GridContainer" instance=ExtResource("2_0fobh")]
+[node name="InventorySlot17" parent="BaseInventory/GridContainer" instance=ExtResource("2_0fobh")]
 layout_mode = 2
 
-[node name="InventorySlot18" parent="NinePatchRect/GridContainer" instance=ExtResource("2_0fobh")]
+[node name="InventorySlot18" parent="BaseInventory/GridContainer" instance=ExtResource("2_0fobh")]
 layout_mode = 2
 
-[node name="InventorySlot19" parent="NinePatchRect/GridContainer" instance=ExtResource("2_0fobh")]
+[node name="InventorySlot19" parent="BaseInventory/GridContainer" instance=ExtResource("2_0fobh")]
 layout_mode = 2
 
-[node name="InventorySlot20" parent="NinePatchRect/GridContainer" instance=ExtResource("2_0fobh")]
+[node name="InventorySlot20" parent="BaseInventory/GridContainer" instance=ExtResource("2_0fobh")]
 layout_mode = 2
 
-[node name="InventorySlot21" parent="NinePatchRect/GridContainer" instance=ExtResource("2_0fobh")]
+[node name="InventorySlot21" parent="BaseInventory/GridContainer" instance=ExtResource("2_0fobh")]
 layout_mode = 2
 
-[node name="InventorySlot22" parent="NinePatchRect/GridContainer" instance=ExtResource("2_0fobh")]
+[node name="InventorySlot22" parent="BaseInventory/GridContainer" instance=ExtResource("2_0fobh")]
 layout_mode = 2
 
-[node name="InventorySlot23" parent="NinePatchRect/GridContainer" instance=ExtResource("2_0fobh")]
+[node name="InventorySlot23" parent="BaseInventory/GridContainer" instance=ExtResource("2_0fobh")]
 layout_mode = 2
 
-[node name="InventorySlot24" parent="NinePatchRect/GridContainer" instance=ExtResource("2_0fobh")]
+[node name="InventorySlot24" parent="BaseInventory/GridContainer" instance=ExtResource("2_0fobh")]
 layout_mode = 2
 
-[node name="InventorySlot25" parent="NinePatchRect/GridContainer" instance=ExtResource("2_0fobh")]
+[node name="InventorySlot25" parent="BaseInventory/GridContainer" instance=ExtResource("2_0fobh")]
 layout_mode = 2
 
-[node name="InventorySlot26" parent="NinePatchRect/GridContainer" instance=ExtResource("2_0fobh")]
+[node name="InventorySlot26" parent="BaseInventory/GridContainer" instance=ExtResource("2_0fobh")]
 layout_mode = 2
 
-[node name="InventorySlot27" parent="NinePatchRect/GridContainer" instance=ExtResource("2_0fobh")]
+[node name="InventorySlot27" parent="BaseInventory/GridContainer" instance=ExtResource("2_0fobh")]
 layout_mode = 2
 
-[node name="InventorySlot28" parent="NinePatchRect/GridContainer" instance=ExtResource("2_0fobh")]
+[node name="InventorySlot28" parent="BaseInventory/GridContainer" instance=ExtResource("2_0fobh")]
 layout_mode = 2
 
-[node name="InventorySlot29" parent="NinePatchRect/GridContainer" instance=ExtResource("2_0fobh")]
+[node name="InventorySlot29" parent="BaseInventory/GridContainer" instance=ExtResource("2_0fobh")]
 layout_mode = 2
 
-[node name="InventorySlot30" parent="NinePatchRect/GridContainer" instance=ExtResource("2_0fobh")]
+[node name="InventorySlot30" parent="BaseInventory/GridContainer" instance=ExtResource("2_0fobh")]
 layout_mode = 2
 
-[node name="InventorySlot31" parent="NinePatchRect/GridContainer" instance=ExtResource("2_0fobh")]
+[node name="InventorySlot31" parent="BaseInventory/GridContainer" instance=ExtResource("2_0fobh")]
 layout_mode = 2
 
-[node name="InventorySlot32" parent="NinePatchRect/GridContainer" instance=ExtResource("2_0fobh")]
+[node name="InventorySlot32" parent="BaseInventory/GridContainer" instance=ExtResource("2_0fobh")]
 layout_mode = 2
 
-[node name="InventorySlot33" parent="NinePatchRect/GridContainer" instance=ExtResource("2_0fobh")]
+[node name="InventorySlot33" parent="BaseInventory/GridContainer" instance=ExtResource("2_0fobh")]
 layout_mode = 2
 
-[node name="InventorySlot34" parent="NinePatchRect/GridContainer" instance=ExtResource("2_0fobh")]
+[node name="InventorySlot34" parent="BaseInventory/GridContainer" instance=ExtResource("2_0fobh")]
 layout_mode = 2
 
-[node name="InventorySlot35" parent="NinePatchRect/GridContainer" instance=ExtResource("2_0fobh")]
+[node name="InventorySlot35" parent="BaseInventory/GridContainer" instance=ExtResource("2_0fobh")]
 layout_mode = 2
 
-[node name="InventorySlot36" parent="NinePatchRect/GridContainer" instance=ExtResource("2_0fobh")]
+[node name="InventorySlot36" parent="BaseInventory/GridContainer" instance=ExtResource("2_0fobh")]
 layout_mode = 2
 
-[node name="InventorySlot37" parent="NinePatchRect/GridContainer" instance=ExtResource("2_0fobh")]
+[node name="InventorySlot37" parent="BaseInventory/GridContainer" instance=ExtResource("2_0fobh")]
 layout_mode = 2
 
-[node name="InventorySlot38" parent="NinePatchRect/GridContainer" instance=ExtResource("2_0fobh")]
+[node name="InventorySlot38" parent="BaseInventory/GridContainer" instance=ExtResource("2_0fobh")]
 layout_mode = 2
 
-[node name="InventorySlot39" parent="NinePatchRect/GridContainer" instance=ExtResource("2_0fobh")]
+[node name="InventorySlot39" parent="BaseInventory/GridContainer" instance=ExtResource("2_0fobh")]
 layout_mode = 2
 
-[node name="InventorySlot40" parent="NinePatchRect/GridContainer" instance=ExtResource("2_0fobh")]
+[node name="InventorySlot40" parent="BaseInventory/GridContainer" instance=ExtResource("2_0fobh")]
 layout_mode = 2
 
-[node name="InventorySlot41" parent="NinePatchRect/GridContainer" instance=ExtResource("2_0fobh")]
+[node name="InventorySlot41" parent="BaseInventory/GridContainer" instance=ExtResource("2_0fobh")]
 layout_mode = 2
 
-[node name="InventorySlot42" parent="NinePatchRect/GridContainer" instance=ExtResource("2_0fobh")]
+[node name="InventorySlot42" parent="BaseInventory/GridContainer" instance=ExtResource("2_0fobh")]
 layout_mode = 2
 
-[node name="InventorySlot43" parent="NinePatchRect/GridContainer" instance=ExtResource("2_0fobh")]
+[node name="InventorySlot43" parent="BaseInventory/GridContainer" instance=ExtResource("2_0fobh")]
 layout_mode = 2
 
-[node name="InventorySlot44" parent="NinePatchRect/GridContainer" instance=ExtResource("2_0fobh")]
+[node name="InventorySlot44" parent="BaseInventory/GridContainer" instance=ExtResource("2_0fobh")]
 layout_mode = 2
 
-[node name="InventorySlot45" parent="NinePatchRect/GridContainer" instance=ExtResource("2_0fobh")]
+[node name="InventorySlot45" parent="BaseInventory/GridContainer" instance=ExtResource("2_0fobh")]
 layout_mode = 2
 
-[node name="InventorySlot46" parent="NinePatchRect/GridContainer" instance=ExtResource("2_0fobh")]
+[node name="InventorySlot46" parent="BaseInventory/GridContainer" instance=ExtResource("2_0fobh")]
 layout_mode = 2
 
-[node name="InventorySlot47" parent="NinePatchRect/GridContainer" instance=ExtResource("2_0fobh")]
+[node name="InventorySlot47" parent="BaseInventory/GridContainer" instance=ExtResource("2_0fobh")]
 layout_mode = 2
 
-[node name="InventorySlot48" parent="NinePatchRect/GridContainer" instance=ExtResource("2_0fobh")]
+[node name="InventorySlot48" parent="BaseInventory/GridContainer" instance=ExtResource("2_0fobh")]
+layout_mode = 2
+
+[node name="AgricultureInventory" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.01
+anchor_bottom = 1.822
+offset_right = 0.0200043
+offset_bottom = -0.00601196
+texture = ExtResource("1_ufdli")
+patch_margin_left = 7
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
+
+[node name="GridContainer" type="GridContainer" parent="AgricultureInventory"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = 8.0
+offset_right = 179.0
+offset_bottom = 111.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+theme_override_constants/h_separation = 98
+theme_override_constants/v_separation = 30
+columns = 4
+
+[node name="AgriculturePanel" parent="AgricultureInventory/GridContainer" instance=ExtResource("3_873lx")]
+layout_mode = 2
+
+[node name="AgriculturePanel2" parent="AgricultureInventory/GridContainer" instance=ExtResource("3_873lx")]
+layout_mode = 2
+
+[node name="AgriculturePanel3" parent="AgricultureInventory/GridContainer" instance=ExtResource("3_873lx")]
+layout_mode = 2
+
+[node name="AgriculturePanel4" parent="AgricultureInventory/GridContainer" instance=ExtResource("3_873lx")]
+layout_mode = 2
+
+[node name="AgriculturePanel5" parent="AgricultureInventory/GridContainer" instance=ExtResource("3_873lx")]
 layout_mode = 2
 
 [node name="ChangeOptionButtonContainer" type="GridContainer" parent="."]
@@ -197,12 +242,12 @@ offset_bottom = 2.0
 grow_horizontal = 2
 columns = 3
 
-[node name="InventoryShowButton" type="Button" parent="ChangeOptionButtonContainer"]
+[node name="BaseInvShowButton" type="Button" parent="ChangeOptionButtonContainer"]
 editor_description = "Вкладка главного инвентаря для всяких предметов/инструментов"
 layout_mode = 2
 flat = true
 
-[node name="Sprite2D" type="Sprite2D" parent="ChangeOptionButtonContainer/InventoryShowButton"]
+[node name="Sprite2D" type="Sprite2D" parent="ChangeOptionButtonContainer/BaseInvShowButton"]
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_kk1m2")
 centered = false

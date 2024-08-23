@@ -6,7 +6,7 @@ public partial class ParentInventoryGUI : Node2D, IBaseUI
 {
     
 
-    public void ShowWindow(Control UIScene, GameProfileManager profileManager)
+    public void ShowWindow(InventoryPaths invpaths, GameProfileManager profileManager)
     {
         GD.Print(profileManager.playerPos);
 
@@ -17,22 +17,46 @@ public partial class ParentInventoryGUI : Node2D, IBaseUI
         //UIScene.Position = inventoryPosition;
 
 
-        UIScene.Visible = true;
+        invpaths.UIScene.Visible = true;
         profileManager.isInventoryOpen = true; // юишка активна
 
 
-        GD.Print("Позиция инвентаря: "+ UIScene.Position);
+        GD.Print("Позиция инвентаря: "+ invpaths.UIScene.Position);
 
 
     }
 
-    public void HideWindow(Control UIScene, GameProfileManager profileManager)
+    public void HideWindow(InventoryPaths invpaths, GameProfileManager profileManager)
     {
 
 
 
-        UIScene.Visible = false;
+        invpaths.UIScene.Visible = false;
         profileManager.isInventoryOpen = false;
+
+    }
+
+    public void ShowAgricultureInv(InventoryPaths invpaths, GameProfileManager profileManager)
+    {
+
+
+
+        invpaths.BaseInvPath.Visible = false;
+        invpaths.AgricultureInvPath.Visible = true;
+        profileManager.isInventoryOpen = true; // юишка активна
+
+
+    }
+
+    public void ShowBaseInv(InventoryPaths invpaths, GameProfileManager profileManager)
+    {
+
+
+
+        invpaths.BaseInvPath.Visible = true;
+        invpaths.AgricultureInvPath.Visible = false;
+        profileManager.isInventoryOpen = true; // юишка активна
+
 
     }
 
@@ -46,7 +70,26 @@ public partial class ParentInventoryGUI : Node2D, IBaseUI
 
 
 
+public class InventoryPaths
+{
+    // пути для инвентаря
+    public Control UIScene { get; set; }
+    public NinePatchRect BaseInvPath { get; set; }
+    public NinePatchRect AgricultureInvPath { get; set; }
+    public Button InvButtonBaseInv { get; set; }
+    public Button InvButtonAgriculture { get; set; }
 
+
+    public InventoryPaths(Control uIScene, NinePatchRect baseInvPath, NinePatchRect agricultureInvPath, Button invButtonBaseInv, Button invButtonAgriculture)
+    {
+        UIScene = uIScene;
+        BaseInvPath = baseInvPath;
+        AgricultureInvPath = agricultureInvPath;
+        InvButtonBaseInv = invButtonBaseInv;
+        InvButtonAgriculture = invButtonAgriculture;
+
+    }
+}
 
 
 
@@ -54,8 +97,17 @@ public partial class InventoryGUI : Node
 {
 
     private ParentInventoryGUI _inventoryGUI;
-    private Control UIScene;
+    private Control _uIScene;
+    private NinePatchRect _baseInvPath;
+    private NinePatchRect _aggricultureInvPath;
+    private Button _invButtonBaseInv;
+    private Button _invButtonAgriculture;
     
+
+
+    private InventoryPaths invpaths;
+
+
     private bool _uiIsVisible;
 
     private GameProfileManager profileManager;
@@ -64,23 +116,49 @@ public partial class InventoryGUI : Node
 
     public override void _Ready()
 	{
-        UIScene = GetNode<Control>("InventoryGUI");
-        UIScene.Visible = false;
+        _uIScene = GetNode<Control>("InventoryGUI");
+        _baseInvPath = _uIScene.GetNode<NinePatchRect>("BaseInventory");
+        _aggricultureInvPath = _uIScene.GetNode<NinePatchRect>("AgricultureInventory");
+        _invButtonBaseInv = _uIScene.GetNode<Button>("ChangeOptionButtonContainer/BaseInvShowButton");
+        _invButtonAgriculture = _uIScene.GetNode<Button>("ChangeOptionButtonContainer/AgricultureButton");
+
+
+        invpaths = new InventoryPaths(_uIScene, _baseInvPath, _aggricultureInvPath, _invButtonBaseInv, _invButtonAgriculture);
+
+
+        invpaths.UIScene.Visible = false;
+        invpaths.AgricultureInvPath.Visible = false;
+
+
+
+        invpaths.InvButtonAgriculture.Pressed += OnAgricultureButtonPressed;
+        invpaths.InvButtonBaseInv.Pressed += OnBaseInvButtonPressed;
+
 
         profileManager = GetNode<GameProfileManager>("/root/GameProfileManager");
 
         _inventoryGUI = new ParentInventoryGUI();
+
     }
 
 
 
 
+    private void OnBaseInvButtonPressed()
+    {
+        // нажата кнопка базового инвентаря
+        _inventoryGUI.ShowBaseInv(invpaths, profileManager);
+    }
 
 
 
 
-
-
+    private  void OnAgricultureButtonPressed()
+    {
+        //нажата кнопка инвентаря с сельскохозяйственными культурами
+        GD.Print("Нажата кнопка показа культур");
+        _inventoryGUI.ShowAgricultureInv(invpaths, profileManager);
+    }
 
 
 
@@ -95,7 +173,7 @@ public partial class InventoryGUI : Node
             if (_uiIsVisible)
             {
                 // Скрываем UI
-                _inventoryGUI.HideWindow(UIScene, profileManager);
+                _inventoryGUI.HideWindow(invpaths, profileManager);
                 _uiIsVisible = false;
             }
             else
@@ -103,7 +181,7 @@ public partial class InventoryGUI : Node
                 if (profileManager.isUIActive == false)
                 {
                     // Показываем UI
-                    _inventoryGUI.ShowWindow(UIScene, profileManager);
+                    _inventoryGUI.ShowWindow(invpaths, profileManager);
                     _uiIsVisible = true;
                 }
                     
@@ -111,6 +189,8 @@ public partial class InventoryGUI : Node
 
             }
         }
+
+
     }
 
 
@@ -121,7 +201,10 @@ public partial class InventoryGUI : Node
     public override void _Process(double delta)
     {
 
-        
+        //if (Input.IsMouseButtonPressed(MouseButton.Left))
+        //{
+        //    GD.Print("Mouse Left Button Pressed");
+        //}
 
     }
 }
